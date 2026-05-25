@@ -142,7 +142,7 @@ Output Schema:
         return NextResponse.json({ error: "Missing GEMINI_API_KEY" }, { status: 500 });
       }
   
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${apiKey}`;
   
       const history = (messages || []).map((m: { role: string; content: string }) => ({
         role: m.role === 'assistant' ? 'model' : 'user',
